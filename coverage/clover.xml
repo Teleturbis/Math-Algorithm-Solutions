@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1710858223453" clover="3.2.0">
-  <project timestamp="1710858223453" name="All files">
+<coverage generated="1710858482088" clover="3.2.0">
+  <project timestamp="1710858482088" name="All files">
     <metrics statements="82" coveredstatements="82" conditionals="23" coveredconditionals="23" methods="14" coveredmethods="14" elements="119" coveredelements="119" complexity="0" loc="82" ncloc="82" packages="1" files="6" classes="6"/>
     <file name="factorial.ts" path="C:\Programmieren\Rätsel\src\factorial.ts">
       <metrics statements="7" coveredstatements="7" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
