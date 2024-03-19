@@ -8,7 +8,8 @@
     "dev": "npx nodemon",
     "test": "jest --coverage",
     "lint": "eslint \"src/**/*.ts\" \"tests/**/*.ts\"",
-    "lint:fix": "eslint \"src/**/*.ts\" \"tests/**/*.ts\" --fix"
+    "lint:fix": "eslint \"src/**/*.ts\" \"tests/**/*.ts\" --fix",
+    "update-check-coverage": "npx tsc tests/check-coverage.ts"
   },
   "author": "Kevin Poppe",
   "license": "MIT",

@@ -1,10 +1,10 @@
 import * as fs from 'fs';
 
 interface Coverage {
-  statements: { pct: number }
-  branches: { pct: number }
-  functions: { pct: number }
-  lines: { pct: number }
+  statements: { pct: number };
+  branches: { pct: number };
+  functions: { pct: number };
+  lines: { pct: number };
 }
 
 const coverageSummaryPath = './coverage/coverage-summary.json';
@@ -32,9 +32,24 @@ Object.keys(coverageSummary).forEach((file) => {
       `Coverage check failed for ${file}: Statements ${statements.pct}%, Branches ${branches.pct}%, Functions ${functions.pct}%, Lines ${lines.pct}%`
     );
     coverageCheckPassed = false;
+  } else {
+    console.log(
+      `Coverage check passed for ${file}: Statements ${statements.pct}%, Branches ${branches.pct}%, Functions ${functions.pct}%, Lines ${lines.pct}%`
+    );
   }
 });
 
 if (!coverageCheckPassed) {
   process.exit(1);
 }
+
+console.log(
+  'Coverage check passed. 🎉🎉🎉\nTotal coverage:\n- lines - ',
+  coverageSummary.total.lines.pct,
+  '%\n- statements - ',
+  coverageSummary.total.statements.pct,
+  '%\n- branches - ',
+  coverageSummary.total.branches.pct,
+  '%\n- functions - ',
+  coverageSummary.total.functions.pct
+);
