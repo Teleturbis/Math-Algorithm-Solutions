@@ -11,5 +11,6 @@
     "esModuleInterop": true,
     "resolveJsonModule": true
   },
-  "exclude": ["jest.config.js"]
+  "exclude": ["jest.config.js", "coverage/**/*"],
+  "include": ["src/**/*.ts", "src/**/*.json"]
 }
