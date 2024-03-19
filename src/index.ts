@@ -4,6 +4,7 @@ import { sumOfMultiples } from './sumOfMultiples';
 import { factorial } from './factorial';
 import { sumOfRange } from './sum';
 import { fibonacci } from './fibonacci';
+import { linearRegression } from './linear-regression';
 
 export {
   factorial,
@@ -14,5 +15,6 @@ export {
   sumOfMultiples,
   smallestCommonMultiple,
   sumOfRange,
-  fibonacci
+  fibonacci,
+  linearRegression,
 };

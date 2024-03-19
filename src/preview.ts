@@ -3,3 +3,9 @@
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import * as Maths from '.';
+
+const x = Array.from({ length: 200 }, (_, i) => i + 1);
+
+const y = x.map((x) => 50 + 2 * x + (Math.random() - 0.5) * 405);
+
+console.log(Maths.linearRegression(x, y));
