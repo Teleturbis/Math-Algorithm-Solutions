@@ -1,3 +1,4 @@
-import * as Maths from '.';
+// This file is used to test the modules in development mode.
+// Please keep this file clean and delete the content before publishing the pull request.
 
-console.log(Maths.fibonacci(10, 5));
+import * as Maths from '.';
