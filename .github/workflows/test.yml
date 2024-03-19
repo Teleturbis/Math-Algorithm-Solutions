@@ -1,0 +1,40 @@
+name: CI Pipeline
+
+# Dieses Workflow wird bei jedem Push ausgelöst, in jedem Branch.
+on: [push]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout repository
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20' # Verwende eine spezifische Node.js Version.
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests with coverage
+        run: npm test -- --coverage
+
+      # Überprüfung der Testabdeckung.
+      - name: Check coverage
+        run: |
+          COVERAGE_THRESHOLD=90
+          COVERAGE=$(jq '.total.statements.pct' coverage/coverage-summary.json)
+          echo "Extracted Coverage: $COVERAGE%"
+          if [ $(echo "$COVERAGE < $COVERAGE_THRESHOLD" | bc) -eq 1 ]; then
+            echo "Test coverage is below threshold ($COVERAGE_THRESHOLD%). Exiting with failure."
+            exit 1
+          else
+            echo "Test coverage meets threshold ($COVERAGE_THRESHOLD%). Proceeding."
+          fi
+
+      # Überprüfen der Testabdeckung für einzelne Dateien.
+      - name: Verify individual file coverage
+        run: node tests/check-coverage.js
