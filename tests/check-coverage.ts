@@ -51,5 +51,6 @@ console.log(
   '%\n- branches - ',
   coverageSummary.total.branches.pct,
   '%\n- functions - ',
-  coverageSummary.total.functions.pct
+  coverageSummary.total.functions.pct,
+  '%'
 );
