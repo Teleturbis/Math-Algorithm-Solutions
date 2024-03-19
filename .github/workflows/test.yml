@@ -1,0 +1,36 @@
+name: Run Tests
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests with coverage
+        run: npm test -- --coverage
+
+      - name: Check coverage
+        run: |
+          COVERAGE_THRESHOLD=90
+          COVERAGE=$(grep "Statements" coverage/lcov-report/index.html | grep -oP "\d+(?=%)")
+          if [ "$COVERAGE" -lt "$COVERAGE_THRESHOLD" ]; then
+            echo "Test coverage is below threshold. Exiting with failure."
+            exit 1
+          else
+            echo "Test coverage meets threshold. Proceeding."
+          fi
