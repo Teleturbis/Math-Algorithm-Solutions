@@ -34,3 +34,7 @@ jobs:
           else
             echo "Test coverage meets threshold ($COVERAGE_THRESHOLD%). Proceeding."
           fi
+
+      # Überprüfen der Testabdeckung für einzelne Dateien.
+      - name: Verify individual file coverage
+        run: node check-coverage.js
