@@ -24,7 +24,7 @@ jobs:
       - name: Check coverage
         run: |
           COVERAGE_THRESHOLD=90
-          if [ -f "coverage/lcov-report/index.html" ]; then
+          if [ -f "./coverage/lcov-report/index.html" ]; then
             COVERAGE=$(grep "Statements" coverage/lcov-report/index.html | grep -oP "\d+(?=%)")
             if [ "$COVERAGE" -lt "$COVERAGE_THRESHOLD" ]; then
               echo "Test coverage is below threshold. Exiting with failure."
