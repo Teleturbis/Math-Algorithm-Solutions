@@ -11,5 +11,3 @@ export function sumOfRange(startVal: number, endVal: number): number {
 
   return res;
 }
-
-// test
