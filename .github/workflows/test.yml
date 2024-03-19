@@ -37,4 +37,4 @@ jobs:
 
       # Überprüfen der Testabdeckung für einzelne Dateien.
       - name: Verify individual file coverage
-        run: node check-coverage.js
+        run: node tests/check-coverage.js
