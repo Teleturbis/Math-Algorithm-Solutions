@@ -24,4 +24,4 @@ Object.keys(coverageSummary).forEach(function (file) {
 if (!coverageCheckPassed) {
     process.exit(1);
 }
-console.log('Coverage check passed. 🎉🎉🎉\nTotal coverage:\n- lines - ', coverageSummary.total.lines.pct, '%\n- statements - ', coverageSummary.total.statements.pct, '%\n- branches - ', coverageSummary.total.branches.pct, '%\n- functions - ', coverageSummary.total.functions.pct);
+console.log('Coverage check passed. 🎉🎉🎉\nTotal coverage:\n- lines - ', coverageSummary.total.lines.pct, '%\n- statements - ', coverageSummary.total.statements.pct, '%\n- branches - ', coverageSummary.total.branches.pct, '%\n- functions - ', coverageSummary.total.functions.pct, '%');
