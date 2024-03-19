@@ -1,2 +1,2 @@
 # .husky/pre-commit
-npx lint-staged && npm test
+npx lint-staged && npm test --coverage
