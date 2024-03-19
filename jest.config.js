@@ -3,5 +3,5 @@ module.exports = {
   testEnvironment: 'node',
   collectCoverage: true,
   collectCoverageFrom: ['src/**/*.ts', '!src/index.ts'],
-  coverageReporters: ['json-summary'],
+  coverageReporters: ['json-summary', 'text'],
 };
