@@ -2,5 +2,5 @@
   "watch": ["./"],
   "ext": ".ts,.js",
   "ignore": [],
-  "exec": "npx ts-node ./tests/check-coverage.ts"
+  "exec": "npx ts-node ./preview.ts"
 }
