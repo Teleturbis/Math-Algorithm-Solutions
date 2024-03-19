@@ -1,10 +1,10 @@
 import * as fs from 'fs';
 
 interface Coverage {
-  statements: { pct: number };
-  branches: { pct: number };
-  functions: { pct: number };
-  lines: { pct: number };
+  statements: { pct: number }
+  branches: { pct: number }
+  functions: { pct: number }
+  lines: { pct: number }
 }
 
 const coverageSummaryPath = './coverage/coverage-summary.json';
@@ -14,7 +14,7 @@ if (!fs.existsSync(coverageSummaryPath)) {
   process.exit(1);
 }
 
-const coverageSummary: { [key: string]: Coverage } = JSON.parse(
+const coverageSummary: Record<string, Coverage> = JSON.parse(
   fs.readFileSync(coverageSummaryPath, 'utf8')
 );
 

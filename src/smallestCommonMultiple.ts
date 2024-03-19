@@ -1,18 +1,21 @@
 // Euklidischer Algorithmus
-function gcd(a: number, b: number) {
+function gcd(a: number, b: number): number {
   while (b !== 0) {
-    let temp = b;
+    const temp = b;
     b = a % b;
     a = temp;
   }
   return a;
 }
 
-function lcm(a: number, b: number) {
+function lcm(a: number, b: number): number {
   return (a * b) / gcd(a, b);
 }
 
-export function smallestCommonMultiple(startVal: number, endVal: number) {
+export function smallestCommonMultiple(
+  startVal: number,
+  endVal: number
+): number {
   if (startVal > endVal) {
     throw new Error('Invalid input. startVal must be less than endVal.');
   }

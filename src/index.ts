@@ -14,5 +14,5 @@ export {
   sumOfMultiples,
   smallestCommonMultiple,
   sumOfRange,
-  fibonacci,
+  fibonacci
 };
