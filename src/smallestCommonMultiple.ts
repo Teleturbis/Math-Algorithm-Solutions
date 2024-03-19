@@ -13,6 +13,10 @@ function lcm(a: number, b: number) {
 }
 
 export function smallestCommonMultiple(startVal: number, endVal: number) {
+  if (startVal > endVal) {
+    throw new Error('Invalid input. startVal must be less than endVal.');
+  }
+
   let result = startVal;
   for (let i = startVal + 1; i <= endVal; i++) {
     result = lcm(result, i);

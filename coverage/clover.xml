@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1710852519299" clover="3.2.0">
+  <project timestamp="1710852519299" name="All files">
+    <metrics statements="61" coveredstatements="61" conditionals="17" coveredconditionals="17" methods="11" coveredmethods="11" elements="89" coveredelements="89" complexity="0" loc="61" ncloc="61" packages="1" files="4" classes="4"/>
+    <file name="factorial.ts" path="C:\Programmieren\Rätsel\src\factorial.ts">
+      <metrics statements="7" coveredstatements="7" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="7" type="cond" truecount="1" falsecount="0"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="6" count="6" type="stmt"/>
+      <line num="7" count="6" type="stmt"/>
+      <line num="8" count="18" type="stmt"/>
+      <line num="11" count="6" type="stmt"/>
+    </file>
+    <file name="prime.ts" path="C:\Programmieren\Rätsel\src\prime.ts">
+      <metrics statements="32" coveredstatements="32" conditionals="6" coveredconditionals="6" methods="5" coveredmethods="5"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="24" type="cond" truecount="1" falsecount="0"/>
+      <line num="3" count="22" type="cond" truecount="1" falsecount="0"/>
+      <line num="5" count="21" type="stmt"/>
+      <line num="6" count="22" type="cond" truecount="1" falsecount="0"/>
+      <line num="9" count="11" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="13" count="6" type="stmt"/>
+      <line num="15" count="6" type="stmt"/>
+      <line num="16" count="5" type="stmt"/>
+      <line num="19" count="6" type="stmt"/>
+      <line num="24" count="4" type="stmt"/>
+      <line num="25" count="4" type="stmt"/>
+      <line num="28" count="4" type="stmt"/>
+      <line num="29" count="10" type="cond" truecount="1" falsecount="0"/>
+      <line num="30" count="8" type="stmt"/>
+      <line num="31" count="36" type="stmt"/>
+      <line num="36" count="4" type="stmt"/>
+      <line num="39" count="1" type="stmt"/>
+      <line num="40" count="2" type="stmt"/>
+      <line num="43" count="2" type="stmt"/>
+      <line num="44" count="2" type="stmt"/>
+      <line num="45" count="30" type="cond" truecount="1" falsecount="0"/>
+      <line num="46" count="12" type="stmt"/>
+      <line num="50" count="2" type="stmt"/>
+      <line num="53" count="1" type="stmt"/>
+      <line num="54" count="2" type="stmt"/>
+      <line num="56" count="2" type="stmt"/>
+      <line num="57" count="2" type="stmt"/>
+      <line num="58" count="32" type="cond" truecount="1" falsecount="0"/>
+      <line num="59" count="12" type="stmt"/>
+      <line num="62" count="2" type="stmt"/>
+    </file>
+    <file name="smallestCommonMultiple.ts" path="C:\Programmieren\Rätsel\src\smallestCommonMultiple.ts">
+      <metrics statements="13" coveredstatements="13" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
+      <line num="3" count="32" type="stmt"/>
+      <line num="4" count="71" type="stmt"/>
+      <line num="5" count="71" type="stmt"/>
+      <line num="6" count="71" type="stmt"/>
+      <line num="8" count="32" type="stmt"/>
+      <line num="12" count="32" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="16" count="4" type="cond" truecount="1" falsecount="0"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="20" count="3" type="stmt"/>
+      <line num="21" count="3" type="stmt"/>
+      <line num="22" count="32" type="stmt"/>
+      <line num="24" count="3" type="stmt"/>
+    </file>
+    <file name="sumOfMultiples.ts" path="C:\Programmieren\Rätsel\src\sumOfMultiples.ts">
+      <metrics statements="9" coveredstatements="9" conditionals="9" coveredconditionals="9" methods="2" coveredmethods="2"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="6" count="6" type="cond" truecount="4" falsecount="0"/>
+      <line num="7" count="2" type="stmt"/>
+      <line num="12" count="4" type="stmt"/>
+      <line num="13" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="15" count="4" type="stmt"/>
+      <line num="16" count="20" type="cond" truecount="2" falsecount="0"/>
+      <line num="17" count="20" type="cond" truecount="1" falsecount="0"/>
+      <line num="20" count="16" type="stmt"/>
+    </file>
+  </project>
+</coverage>

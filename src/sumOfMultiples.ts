@@ -4,7 +4,9 @@ export function sumOfMultiples(
   factor?: number
 ) {
   if ((factor && factor <= 0) || startVal > endVal) {
-    return 0; // Fehlerbehandlung für ungültige Eingaben
+    throw new Error(
+      'Invalid input. Factor must be greater than 0 and startVal must be less than endVal.'
+    );
   }
 
   const n = [];
