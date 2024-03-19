@@ -26,10 +26,9 @@ jobs:
       - name: Check coverage
         run: |
           COVERAGE_THRESHOLD=90
-          # Die Coverage-Informationen werden aus der generierten index.html Datei extrahiert.
-          COVERAGE=$(grep -oP "Statements\s+\K\d+(?=%)" coverage/lcov-report/index.html)
+          COVERAGE=$(jq '.total.statements.pct' coverage/coverage-summary.json)
           echo "Extracted Coverage: $COVERAGE%"
-          if [ "$COVERAGE" -lt "$COVERAGE_THRESHOLD" ]; then
+          if [ $(echo "$COVERAGE < $COVERAGE_THRESHOLD" | bc) -eq 1 ]; then
             echo "Test coverage is below threshold ($COVERAGE_THRESHOLD%). Exiting with failure."
             exit 1
           else
