@@ -1,19 +1,20 @@
-name: Run Tests
+name: CI Pipeline
 
-on: pull_request
+# Dieses Workflow wird bei jedem Push ausgelöst, in jedem Branch.
+on: [push]
 
 jobs:
-  test:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+        name: Checkout repository
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '20'
+          node-version: '20' # Verwende eine spezifische Node.js Version.
 
       - name: Install dependencies
         run: npm install
@@ -21,18 +22,16 @@ jobs:
       - name: Run tests with coverage
         run: npm test -- --coverage
 
+      # Überprüfung der Testabdeckung.
       - name: Check coverage
         run: |
           COVERAGE_THRESHOLD=90
-          if [ -f "./coverage/lcov-report/index.html" ]; then
-            COVERAGE=$(grep "Statements" coverage/lcov-report/index.html | grep -oP "\d+(?=%)")
-            if [ "$COVERAGE" -lt "$COVERAGE_THRESHOLD" ]; then
-              echo "Test coverage is below threshold. Exiting with failure."
-              exit 1
-            else
-              echo "Test coverage meets threshold. Proceeding."
-            fi
-          else
-            echo "Coverage report not found. Exiting with failure."
+          # Die Coverage-Informationen werden aus der generierten index.html Datei extrahiert.
+          COVERAGE=$(grep -oP "Statements\s+\K\d+(?=%)" coverage/lcov-report/index.html)
+          echo "Extracted Coverage: $COVERAGE%"
+          if [ "$COVERAGE" -lt "$COVERAGE_THRESHOLD" ]; then
+            echo "Test coverage is below threshold ($COVERAGE_THRESHOLD%). Exiting with failure."
             exit 1
+          else
+            echo "Test coverage meets threshold ($COVERAGE_THRESHOLD%). Proceeding."
           fi
