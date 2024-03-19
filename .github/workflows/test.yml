@@ -38,3 +38,7 @@ jobs:
       # Überprüfen der Testabdeckung für einzelne Dateien.
       - name: Verify individual file coverage
         run: node tests/check-coverage.js
+
+      # EsLint-Überprüfung.
+      - name: Run EsLint
+        run: npm run lint

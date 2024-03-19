@@ -2,7 +2,7 @@ import {
   isPrime,
   nextPrime,
   sumOfPrimeRange,
-  rangeOfPrimes,
+  rangeOfPrimes
 } from '../src/prime';
 
 describe('isPrime', () => {

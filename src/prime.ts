@@ -1,4 +1,4 @@
-export function isPrime(n: number) {
+export function isPrime(n: number): boolean {
   if (n < 1) return false;
   if (n === 1) return false;
 
@@ -9,7 +9,7 @@ export function isPrime(n: number) {
   return true;
 }
 
-export function nextPrime(n: number) {
+export function nextPrime(n: number): number {
   let i = n + 1;
 
   while (!isPrime(i)) {
@@ -19,7 +19,7 @@ export function nextPrime(n: number) {
   return i;
 }
 
-function sieveOfEratosthenes(endVal: number) {
+function sieveOfEratosthenes(endVal: number): boolean[] {
   // Initialisierung des Siebs des Eratosthenes
   const sieve = Array(endVal + 1).fill(true);
   sieve[0] = sieve[1] = false;
@@ -36,7 +36,7 @@ function sieveOfEratosthenes(endVal: number) {
   return sieve;
 }
 
-export function sumOfPrimeRange(startVal: number, endVal: number) {
+export function sumOfPrimeRange(startVal: number, endVal: number): number {
   const sieve = sieveOfEratosthenes(endVal);
 
   // Berechnung der Summe aller Primzahlen im Bereich
@@ -50,7 +50,7 @@ export function sumOfPrimeRange(startVal: number, endVal: number) {
   return sum;
 }
 
-export function rangeOfPrimes(endVal: number) {
+export function rangeOfPrimes(endVal: number): number[] {
   const sieve = sieveOfEratosthenes(endVal);
 
   const trueIndices = [];

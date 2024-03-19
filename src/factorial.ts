@@ -1,4 +1,4 @@
-export function factorial(val: number) {
+export function factorial(val: number): number {
   if (val < 0) {
     throw new Error('Factorial is not defined for negative numbers');
   }
