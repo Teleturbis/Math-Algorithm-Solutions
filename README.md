@@ -1,5 +1,7 @@
 # Math Algorithm Solutions
 
+<sup>German below</sup>
+
 This is a repository containing various JavaScript implementations to solve different mathematical problems and challenges.
 
 ## Contents
