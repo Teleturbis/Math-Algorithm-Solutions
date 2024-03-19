@@ -1,0 +1,17 @@
+{
+  "name": "raetsel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "npx nodemon"
+  },
+  "author": "Kevin Poppe",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.29",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
+  }
+}
